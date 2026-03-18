@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>MRIЯ | Digital</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.css?_v=20260318134210" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script>
+		(function() {
+			const path = window.location.pathname;
+
+			// Базова ініціалізація пікселя — для всіх сторінок
+			!(function(f, b, e, v, n, t, s) {
+				if (f.fbq) return;
+				n = f.fbq = function() {
+					n.callMethod ?
+						n.callMethod.apply(n, arguments) :
+						n.queue.push(arguments);
+				};
+				if (!f._fbq) f._fbq = n;
+				n.push = n;
+				n.loaded = !0;
+				n.version = "2.0";
+				n.queue = [];
+				t = b.createElement(e);
+				t.async = !0;
+				t.src = v;
+				s = b.getElementsByTagName(e)[0];
+				s.parentNode.insertBefore(t, s);
+			})(
+				window,
+				document,
+				"script",
+				"https://connect.facebook.net/en_US/fbevents.js",
+			);
+
+			fbq("init", "1597365177863376");
+			fbq("track", "PageView");
+
+			// Додаткові події для конкретних сторінок
+			if (path.includes("thanks")) {
+				fbq("track", "Lead");
+			}
+		})();
+	</script>
+	<!-- Google Tag Manager -->
+	<script>
+		(function(w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				"gtm.start": new Date().getTime(),
+				event: "gtm.js"
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != "dataLayer" ? "&l=" + l : "";
+			j.async = true;
+			j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, "script", "dataLayer", "GTM-MHGS4PS7");
+	</script>
+	<!-- End Google Tag Manager -->
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="#" class="header__logo">
+					<img src="img/logo.webp" alt="" class="header__img" />
+				</a>
+				<div class="header__menu menu">
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="#" data-goto=".offer" class="menu__link">Послуги</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" data-goto=".comments" class="menu__link">Відгуки</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" data-goto=".results" class="menu__link">Кейси</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<a href="tel:+380661035288" class="header__phone">+38 (066) 103 52 88</a>
+			</div>
+		</header>
+
+		<main class="page">
+			<section class="hero">
+				<div class="hero__container thanks-container">
+					<div class="hero__info info-hero">
+						<h1 data-watch data-watch-once class="info-hero__title">
+							Дякуємо за вашу <br />
+							заявку
+						</h1>
+						<div data-watch data-watch-once class="info-hero__subtitle subtitle-hero">
+							<img src="img/icon-logo-blue.svg" alt="icon-logo" class="subtitle-hero__img" />
+							<p class="subtitle-hero__text">
+								найближчим часом ми звʼяжемось з вами
+							</p>
+						</div>
+						<a data-watch data-watch-once href="index.html" class="info-hero__btn">Повернутись на головну</a>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__top top-footer">
+					<div class="top-footer__info info-footer">
+						<div class="info-footer__notice notice-footer">
+							<img src="img/icon-logo.svg" alt="" class="notice-footer__img" />
+							<p class="notice-footer__text">Досі думаєте?</p>
+						</div>
+						<div class="info-footer__titles">
+							<h2 class="info-footer__title">
+								Досить експерементувати навмання, час <br class="mob" />
+								будувати систему
+							</h2>
+							<p class="info-footer__descriptions">
+								Залиште заявку на експертну діагностику <br class="mob" />
+								маркетингу.
+								<br class="pc" />
+								За 30 хвилин розберемо ваш запит <br class="mob" />
+								і покажемо <br class="pc" />
+								«слабкі місця» вашої поточної моделі.
+							</p>
+						</div>
+					</div>
+					<div class="top-footer__form">
+						<form action="" class="main-form">
+							<div class="main-form__column">
+								<div class="main-form__item item-form">
+									<label for="name" class="item-form__label">Ваше імʼя*</label>
+									<input type="text" name="name" placeholder="Анна" class="item-form__field" />
+								</div>
+								<div class="main-form__item item-form">
+									<label for="phone" class="item-form__label">Ваш номер*</label>
+									<input type="tel" name="phone" placeholder="+38 (099) 999 99 99" class="item-form__field" />
+								</div>
+							</div>
+							<div class="main-form__column">
+								<div class="main-form__item item-form">
+									<label for="descr" class="item-form__label">Розкажіть про свій проєкт*</label>
+									<input type="text" name="descr" placeholder="Трохи опису" class="item-form__field" />
+								</div>
+							</div>
+							<button type="submit" class="main-form__btn">Надіслати</button>
+						</form>
+					</div>
+				</div>
+				<div class="footer__bottom bottom-footer">
+					<a href="#" class="bottom-footer__logo">
+						<img src="img/logo-footer.webp" alt="" class="bottom-footer__img" />
+					</a>
+					<nav class="bottom-footer__menu menu-footer">
+						<a href="" data-goto=".offer" class="menu-footer__link">Послуги</a>
+						<a href="" data-goto=".comments" class="menu-footer__link">Відгуки</a>
+						<a href="" data-goto=".results" class="menu-footer__link">Кейси</a>
+					</nav>
+					<div class="bottom-footer__socials">
+						<a href="#" class="bottom-footer__social">
+							<img src="img/footer-telegram.svg" alt="icon-telegram" />
+						</a>
+						<a href="#" class="bottom-footer__social">
+							<img src="img/footer-insta.svg" alt="icon-insta" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+	<script src="js/app.min.js?_v=20260318134210"></script>
+	<script type="text/javascript">
+		(function(d, w, s) {
+			var widgetHash = "s7oxa7lju0kmunztihyv",
+				gcw = d.createElement(s);
+			gcw.type = "text/javascript";
+			gcw.async = true;
+			gcw.src = "//widgets.binotel.com/getcall/widgets/" + widgetHash + ".js";
+			var sn = d.getElementsByTagName(s)[0];
+			sn.parentNode.insertBefore(gcw, sn);
+		})(document, window, "script");
+	</script>
+
+</body>
+
+</html>
