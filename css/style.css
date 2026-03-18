@@ -704,7 +704,7 @@ body {
 }
 .problem__itembig {
   width: 50%;
-  display: grid;
+  display: grid!important;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   overflow: hidden
@@ -863,7 +863,7 @@ body {
   left: -36%
 }
 .solution__item:nth-child(1)._watcher-view {
-  transition: all .5s ease .2s;
+  transition: all .9s ease .8s;
   left: 0
 }
 .solution__item:nth-child(2) {
@@ -871,7 +871,7 @@ body {
   left: -66%
 }
 .solution__item:nth-child(2)._watcher-view {
-  transition: all .5s ease .4s;
+  transition: all .9s ease .6s;
   left: 0
 }
 .solution__item:nth-child(3) {
@@ -879,7 +879,7 @@ body {
   left: -104%
 }
 .solution__item:nth-child(3)._watcher-view {
-  transition: all .5s ease .6s;
+  transition: all .9s ease .4s;
   left: 0
 }
 .titles {
@@ -993,18 +993,21 @@ body {
   overflow: hidden;
   position: relative;
   border-radius: 20px;
-  transition: all .3s ease
+  transition: all .7s ease
 }
 .marketing__item .item-marketing__text {
-  left: -150%;
-  transition: left .3s ease
+  -webkit-transform: translateX(-150%);
+  transform: translateX(-150%);
+  transition: width 0s,-webkit-transform .7s ease;
+  transition: transform .7s ease,width 0s;
+  transition: transform .7s ease,width 0s,-webkit-transform .7s ease
 }
 .marketing__item:hover {
   flex-grow: 2
 }
 .marketing__item:hover .item-marketing__text {
-  left: 0;
-  width: 92%
+  -webkit-transform: translateX(0);
+  transform: translateX(0)
 }
 .marketing__item:hover .item-marketing__img {
   -webkit-filter: grayscale(0);
@@ -1085,8 +1088,10 @@ body {
   background: rgba(255,255,255,.9);
   position: absolute;
   bottom: 20px;
-  width: 92%;
-  margin: 0 20px
+  width: 460px;
+  margin: 0 20px;
+  -webkit-transform: translateX(-150%);
+  transform: translateX(-150%)
 }
 .offer__container {
   margin-top: 100px;
@@ -1119,9 +1124,9 @@ body {
   left: -25%
 }
 .offer__title:nth-child(1)._watcher-view {
-  transition: left .5s ease .4s,opacity .4s ease,-webkit-transform .4s ease;
-  transition: left .5s ease .4s,opacity .4s ease,transform .4s ease;
-  transition: left .5s ease .4s,opacity .4s ease,transform .4s ease,-webkit-transform .4s ease;
+  transition: left .8s ease .8s,opacity .4s ease,-webkit-transform .4s ease;
+  transition: left .8s ease .8s,opacity .4s ease,transform .4s ease;
+  transition: left .8s ease .8s,opacity .4s ease,transform .4s ease,-webkit-transform .4s ease;
   left: 0
 }
 .offer__title:nth-child(2) {
@@ -1129,9 +1134,9 @@ body {
   left: -50%
 }
 .offer__title:nth-child(2)._watcher-view {
-  transition: left .5s ease .4s,opacity .4s ease,-webkit-transform .4s ease;
-  transition: left .5s ease .4s,opacity .4s ease,transform .4s ease;
-  transition: left .5s ease .4s,opacity .4s ease,transform .4s ease,-webkit-transform .4s ease;
+  transition: left .8s ease .7s,opacity .4s ease,-webkit-transform .4s ease;
+  transition: left .8s ease .7s,opacity .4s ease,transform .4s ease;
+  transition: left .8s ease .7s,opacity .4s ease,transform .4s ease,-webkit-transform .4s ease;
   left: 0
 }
 .offer__title:nth-child(3) {
@@ -1139,9 +1144,9 @@ body {
   left: -75%
 }
 .offer__title:nth-child(3)._watcher-view {
-  transition: left .5s ease .4s,opacity .4s ease,-webkit-transform .4s ease;
-  transition: left .5s ease .4s,opacity .4s ease,transform .4s ease;
-  transition: left .5s ease .4s,opacity .4s ease,transform .4s ease,-webkit-transform .4s ease;
+  transition: left .8s ease .6s,opacity .4s ease,-webkit-transform .4s ease;
+  transition: left .8s ease .6s,opacity .4s ease,transform .4s ease;
+  transition: left .8s ease .6s,opacity .4s ease,transform .4s ease,-webkit-transform .4s ease;
   left: 0
 }
 .offer__title:nth-child(4) {
@@ -1149,9 +1154,9 @@ body {
   left: -100%
 }
 .offer__title:nth-child(4)._watcher-view {
-  transition: left .5s ease .4s,opacity .4s ease,-webkit-transform .4s ease;
-  transition: left .5s ease .4s,opacity .4s ease,transform .4s ease;
-  transition: left .5s ease .4s,opacity .4s ease,transform .4s ease,-webkit-transform .4s ease;
+  transition: left .8s ease .5s,opacity .4s ease,-webkit-transform .4s ease;
+  transition: left .8s ease .5s,opacity .4s ease,transform .4s ease;
+  transition: left .8s ease .5s,opacity .4s ease,transform .4s ease,-webkit-transform .4s ease;
   left: 0
 }
 .offer__title:hover {

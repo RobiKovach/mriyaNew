@@ -197,6 +197,17 @@
                     tabActiveTitle.length ? tabActiveTitle[0].classList.remove("_tab-active") : null;
                     tabTitle.classList.add("_tab-active");
                     setTabsStatus(tabsBlock);
+                    if (tabsBlock.classList.contains("_tab-spoller")) {
+                        const animate = tabsBlock.hasAttribute("data-tabs-animate") ? Number(tabsBlock.dataset.tabsAnimate) || 500 : 0;
+                        setTimeout(() => {
+                            const offset = 20;
+                            const top = tabTitle.getBoundingClientRect().top + window.scrollY - offset;
+                            window.scrollTo({
+                                top,
+                                behavior: "smooth"
+                            });
+                        }, animate);
+                    }
                 }
                 e.preventDefault();
             }
