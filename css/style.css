@@ -2210,6 +2210,10 @@ body {
     gap: 12px;
     align-items: flex-start
   }
+  .marketing__item .item-marketing__text {
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
   .marketing__item:hover {
     background: #3357a3
   }
