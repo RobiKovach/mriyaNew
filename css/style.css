@@ -534,7 +534,8 @@ body {
 @supports (height:100dvh) {
   @media (max-width:47.99875em) {
     .hero {
-      height: 100dvh
+      height: calc(var(--vh,1vh)*100);
+      overflow: hidden
     }
   }
 }
