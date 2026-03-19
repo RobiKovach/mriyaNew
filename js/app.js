@@ -4209,6 +4209,19 @@
         const footerForm = document.querySelector(".top-footer__form .main-form");
         if (footerForm) initForm(footerForm, () => "Форма у футері");
     });
+    const items = document.querySelectorAll(".marketing__item");
+    if (window.innerWidth > 768) {
+        items[0].classList.add("_active");
+        items.forEach(item => {
+            item.addEventListener("mouseenter", () => {
+                items.forEach(i => i.classList.remove("_active"));
+            });
+            item.addEventListener("mouseleave", () => {
+                const hovered = [ ...items ].some(i => i.matches(":hover"));
+                if (!hovered) items[0].classList.add("_active");
+            });
+        });
+    }
     window["FLS"] = true;
     menuInit();
     tabs();
