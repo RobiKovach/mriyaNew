@@ -2045,10 +2045,12 @@ body {
     -moz-column-gap: 30px;
     column-gap: 30px;
     row-gap: 14px;
-    bottom: 0
+    position: static;
+    bottom: auto
   }
   .hero__items._watcher-view {
-    transition: none
+    transition: none;
+    bottom: auto
   }
   .hero__item {
     row-gap: 5px;
