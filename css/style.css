@@ -531,6 +531,13 @@ body {
   background: url(../img/hero-bg.webp) no-repeat center;
   background-size: cover
 }
+@supports (height:100dvh) {
+  @media (max-width:47.99875em) {
+    .hero {
+      height: 100dvh
+    }
+  }
+}
 .hero__container {
   padding-top: 150px;
   padding-bottom: 28px;
@@ -2018,7 +2025,7 @@ body {
   }
   .hero__container {
     padding-top: 83px;
-    padding-bottom: 30px
+    padding-bottom: 50px
   }
   .hero__info {
     row-gap: 7px;
@@ -2032,7 +2039,11 @@ body {
     -webkit-column-gap: 30px;
     -moz-column-gap: 30px;
     column-gap: 30px;
-    row-gap: 14px
+    row-gap: 14px;
+    bottom: 0
+  }
+  .hero__items._watcher-view {
+    transition: none
   }
   .hero__item {
     row-gap: 5px;
