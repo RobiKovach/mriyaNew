@@ -2020,12 +2020,17 @@ body {
     display: none
   }
   .hero {
-    background: url(../img/hero-bg-mob.webp) no-repeat center;
-    background-size: cover
+    background: url(../img/hero-bg-mob.webp) no-repeat center top;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center top;
+    overflow: hidden
   }
   .hero__container {
     padding-top: 83px;
-    padding-bottom: 50px
+    padding-bottom: 50px;
+    overflow: hidden;
+    max-height: 100%
   }
   .hero__info {
     row-gap: 7px;
